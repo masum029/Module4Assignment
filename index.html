@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">My Product Store</a>
+    
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <!-- <li class="nav-item active">
+          <a class="nav-link" href="home.html">Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item active">
+            <a class="nav-link" href="default.html">Default <span class="sr-only">(current)</span></a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cart.html">Products</a>
+        </li> -->
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">index</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#" id="cartIcon">
+               <i style="font-size:24px" class="fa">&#xf07a;</i><span style="margin: -11px;
+               position: absolute;
+               background-color: sandybrown;
+               height: 22px;
+               width: 22px;
+               text-align: center;
+               border: 1px solid transparent;
+               border-radius: 10px;
+               color: floralwhite;" id="txtCartCount">0</span>
+            </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <hr/>
+    <!-- <h3 style="text-align: center;">Product Information</h3>
+    <hr> -->
+    <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <!-- <h4>Product List</h4> -->
+        <div id="product-list" class="row"></div>
+      </div>
+
+    </div>
+  </div>
+
+  
+<!-- Cart Modal -->
+<div class="modal fade" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+          
+          
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <!-- Cart items will go here -->
+          <div id="cart-list" class="row"></div>
+          <p id="total-price" class="font-weight-bold">Total: $0.00</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Clear Cart</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+<script src="index.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('#cartIcon').on('click', function() {
+        $('#cartModal').modal('show');
+      });
+    });
+  </script>
+</body>
+</html>
+
